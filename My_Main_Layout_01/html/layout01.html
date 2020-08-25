@@ -23,21 +23,22 @@
         }
 
         .nav{
-            background-color: lightgreen;
-            height: 30px;
+            background-color: rgb(50, 50, 179);
+            height: 55px;
+            padding: 3px;
         }
 
         .contents{
-            background-color: powderblue;
-            height: 500px;
+            background-color: white;
+            height: 5000px;
             width: 100%;
-            text-align: center;
         }
 
         .footer{
-            background-color: olive;
+            background-color: navy;
             height: 100px;
             text-align: center;
+            color: white;
         }
 
         #title {
@@ -49,21 +50,86 @@
         }
 
         .navbutton {
-            background-color: violet;
-            height: 30px;
-            width: 70px;
+            background-color: royalblue;
+            height: 40px;
+            width: 80px;
             border-radius: 5px;
             transition: all 0.5s;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            color: aqua;
         }
 
         .navbutton:hover {
-            background-color: teal;
-            height: 40px;
-            width: 80px;
+            background-color: rgb(148, 148, 250);
+            height: 50px;
+            width: 90px;
             transition: all 0.5s;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            color: darkslategrey;
         }
 
+        .newsimage {
+            display: inline-block;
+            height: auto;
+            width: auto;
+            margin-top: 50px;
+            background-color: tomato;
+        }
 
+        .newsimage img {
+            height: 300px;
+            width: 500px;
+        }
+
+        .newstitle {
+            display: inline-block;
+            width: 500px;
+            height: auto;
+            margin-top: 50px;
+            border-radius: 8px;
+            padding: 10px
+        }
+
+        .newstitle legend {
+            color: navy;
+        }
+
+        .newstitle fieldset {
+            border: 3px solid navy;
+            border-radius: 5px;
+            color: navy;
+        }
+
+        .newsstory {
+            display: inline-block;
+            width: 500px;
+            height: auto;
+            margin-top: 8px;
+        }
+
+        .leftcontents {
+            position: absolute;
+            margin-left: 50px;
+            text-align: center;
+        }
+
+        .rightcontents{
+            position:fixed;
+            width:175px;
+            display:inline-block; 
+            right:40px;
+            top:170px;
+            background-color: transparent; 
+        }
+
+        .phow {
+            display: inline-block;
+            height: 100px auto;
+            width: 100px;
+            background-color: tomato;
+        }
 
     </style>
 </head>
@@ -76,11 +142,30 @@
             <button class="navbutton">네비버튼</button>
             <button class="navbutton">네비버튼</button>
         </div>
-        <div class="contents">
-            <div><h1>여기는 사진</h1></div>
-            <div><h2>여기는 제목</h2></div>
-            <div><h2></h2></div>
+    <div class="contents">
+
+        <div class="leftcontents">
+            <div class="newsimage"><img src="..\images\news.jpg" alt="대충 여기에 사진을 넣읍시다"></div><br>
+
+        <form>
+        <div class="newstitle">
+            <fieldset>
+            <legend>뉴스제목</legend>
+            <span><h2>여기는 제목</h2></span>
+            </fieldset>
         </div>
+        </form>
+
+        <div class="newsstory">
+            <h3>내에에에에에에용 내용용 <br/> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, fuga qui. Atque beatae est ex expedita, repellendus autem, illum similique cum quibusdam  fuck you, veritatis nam voluptates modi inventore tempore molestiae id!</h3></div>
+        </div>
+
+        <div class="rightcontents">
+            <div class="phow"><h3>일단 계획은 따라다니는 사이드바인데...........</h3></div>
+        </div>
+
+    </div>
+
         <div class="footer"><h1>footer는 대충 우리 닉네임</h1></div>
     </section>
 </body>
