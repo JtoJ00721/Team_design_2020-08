@@ -1,172 +1,182 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Html 레이아웃 디자인</title>
     <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+      .header {
+        background-color: navy;
+        height: 100px;
+        width: 100%;
+        display: flex;
+        position: relative;
+        text-align: center;
+        color: white;
+      }
 
-        .header{
-            background-color: navy;
-            height: 100px;
-            width: 100%;
-            display: flex;
-            position: relative;
-            text-align: center;
-            color: white;
-        }
+      .nav {
+        background-color: rgb(50, 50, 179);
+        height: 55px;
+        padding: 3px;
+      }
 
-        .nav{
-            background-color: rgb(50, 50, 179);
-            height: 55px;
-            padding: 3px;
-        }
+      .contents {
+        background-color: white;
+        height: 5000px;
+        width: 100%;
+      }
 
-        .contents{
-            background-color: white;
-            height: 5000px;
-            width: 100%;
-        }
+      .footer {
+        background-color: navy;
+        height: 100px;
+        text-align: center;
+        color: white;
+      }
 
-        .footer{
-            background-color: navy;
-            height: 100px;
-            text-align: center;
-            color: white;
-        }
+      #title {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
 
-        #title {
-            text-align: center;
-            position:absolute;
-            top:50%;
-            left: 50%;
-            transform:translate(-50%, -50%);
-        }
+      .navbutton {
+        background-color: royalblue;
+        height: 40px;
+        width: 80px;
+        border-radius: 5px;
+        transition: all 0.5s;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        color: aqua;
+      }
 
-        .navbutton {
-            background-color: royalblue;
-            height: 40px;
-            width: 80px;
-            border-radius: 5px;
-            transition: all 0.5s;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            color: aqua;
-        }
+      .navbutton:hover {
+        background-color: rgb(148, 148, 250);
+        height: 50px;
+        width: 90px;
+        transition: all 0.5s;
+        margin-top: 0px;
+        margin-bottom: 5px;
+        color: darkslategrey;
+      }
 
-        .navbutton:hover {
-            background-color: rgb(148, 148, 250);
-            height: 50px;
-            width: 90px;
-            transition: all 0.5s;
-            margin-top: 0px;
-            margin-bottom: 5px;
-            color: darkslategrey;
-        }
+      .newsimage {
+        display: inline-block;
+        height: auto;
+        width: auto;
+        margin-top: 50px;
+        background-color: tomato;
+      }
 
-        .newsimage {
-            display: inline-block;
-            height: auto;
-            width: auto;
-            margin-top: 50px;
-            background-color: tomato;
-        }
+      .newsimage img {
+        height: 300px;
+        width: 500px;
+      }
 
-        .newsimage img {
-            height: 300px;
-            width: 500px;
-        }
+      .newstitle {
+        display: inline-block;
+        width: 500px;
+        height: auto;
+        margin-top: 50px;
+        border-radius: 8px;
+        padding: 10px;
+      }
 
-        .newstitle {
-            display: inline-block;
-            width: 500px;
-            height: auto;
-            margin-top: 50px;
-            border-radius: 8px;
-            padding: 10px
-        }
+      .newstitle legend {
+        color: navy;
+      }
 
-        .newstitle legend {
-            color: navy;
-        }
+      .newstitle fieldset {
+        border: 3px solid navy;
+        border-radius: 5px;
+        color: navy;
+      }
 
-        .newstitle fieldset {
-            border: 3px solid navy;
-            border-radius: 5px;
-            color: navy;
-        }
+      .newsstory {
+        display: inline-block;
+        width: 500px;
+        height: auto;
+        margin-top: 8px;
+      }
 
-        .newsstory {
-            display: inline-block;
-            width: 500px;
-            height: auto;
-            margin-top: 8px;
-        }
+      .leftcontents {
+        position: absolute;
+        margin-left: 50px;
+        text-align: center;
+      }
 
-        .leftcontents {
-            position: absolute;
-            margin-left: 50px;
-            text-align: center;
-        }
+      .rightcontents {
+        position: fixed;
+        width: 175px;
+        display: inline-block;
+        right: 40px;
+        top: 170px;
+        background-color: transparent;
+      }
 
-        .rightcontents{
-            position:fixed;
-            width:175px;
-            display:inline-block; 
-            right:40px;
-            top:170px;
-            background-color: transparent; 
-        }
-
-        .phow {
-            display: inline-block;
-            height: 100px auto;
-            width: 100px;
-            background-color: tomato;
-        }
-
+      .phow {
+        display: inline-block;
+        height: 100px auto;
+        width: 100px;
+        background-color: tomato;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <section>
-        <div class="header"><span id="title"><h1>제목이지롱</h1></span></div>
-        <div class="nav">
-            <button class="navbutton">네비버튼</button>
-            <button class="navbutton">네비버튼</button>
-            <button class="navbutton">네비버튼</button>
-            <button class="navbutton">네비버튼</button>
-        </div>
-    <div class="contents">
-
+      <div class="header">
+        <span id="title"><h1>제목이지롱</h1></span>
+      </div>
+      <div class="nav">
+        <button class="navbutton">네비버튼</button>
+        <button class="navbutton">네비버튼</button>
+        <button class="navbutton">네비버튼</button>
+        <button class="navbutton">네비버튼</button>
+      </div>
+      <div class="contents">
         <div class="leftcontents">
-            <div class="newsimage"><img src="..\images\news.jpg" alt="대충 여기에 사진을 넣읍시다"></div><br>
+          <div class="newsimage">
+            <img src="..\images\news.jpg" alt="대충 여기에 사진을 넣읍시다" />
+          </div>
+          <br />
 
-        <form>
-        <div class="newstitle">
-            <fieldset>
-            <legend>뉴스제목</legend>
-            <span><h2>여기는 제목</h2></span>
-            </fieldset>
-        </div>
-        </form>
+          <form>
+            <div class="newstitle">
+              <fieldset>
+                <legend>뉴스제목</legend>
+                <span><h2>여기는 제목</h2></span>
+              </fieldset>
+            </div>
+          </form>
 
-        <div class="newsstory">
-            <h3>내에에에에에에용 내용용 <br/> Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, fuga qui. Atque beatae est ex expedita, repellendus autem, illum similique cum quibusdam  fuck you, veritatis nam voluptates modi inventore tempore molestiae id!</h3></div>
+          <div class="newsstory">
+            <h3>
+              내에에에에에에용 내용용 <br />
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+              fuga qui. Atque beatae est ex expedita, repellendus autem, illum
+              similique cum quibusdam fuck you, veritatis nam voluptates modi
+              inventore tempore molestiae id!
+            </h3>
+          </div>
         </div>
 
         <div class="rightcontents">
-            <div class="phow"><h3>일단 계획은 따라다니는 사이드바인데...........</h3></div>
+          <div class="phow">
+            <h3>일단 계획은 따라다니는 사이드바인데...........</h3>
+          </div>
         </div>
+      </div>
 
-    </div>
-
-        <div class="footer"><h1>footer는 대충 우리 닉네임</h1></div>
+      <div class="footer"><h1>footer는 대충 우리 닉네임</h1></div>
     </section>
-</body>
+  </body>
 </html>
