@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+/* Create three equal columns that floats next to each other */
+.leftcontents {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+.centercontents {
+  
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+  text-align: center;
+  font:bolder;
+}
+
+.newsimage {
+        display: inline-block;
+        height: auto;
+        width: auto;
+        margin-top: 90px;
+        background-color: rgb(1, 1, 22);
+      }
+
+      .newsimage img {
+        height: 300px;
+        width: 500px;
+      }
+
+      .newstitle {
+        display: inline-block;
+        width: 500px;
+        height: auto;
+        margin-top: 50px;
+        border-radius: 8px;
+        padding: 10px;
+      }
+
+      .newstitle legend {
+        color: rgb(1, 1, 22)vy;
+      }
+
+      .newstitle fieldset {
+        border: 3px solid rgb(1, 1, 22);
+        border-radius: 5px;
+        color: rgb(1, 1, 22);
+      }
+
+      .newsstory {
+        display: inline-block;
+        width: 500px;
+        height: auto;
+        margin-top: 8px;
+      }
+.rightcontents {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+
+
+
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 20px;
+  font: bold;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 50px;
+  text-align: center;
+}
+
+#DripBag {background-color:rgb(1, 1, 22);}
+#Bestcm {background-color: gray;}
+#Notice {background-color:rgb(1, 1, 22);}
+#issue {background-color: gray;}
+
+form fieldset legend {
+           
+           
+            color:gray;
+            font-weight: bold;
+        }
+
+#btn_box {
+            
+            text-align: left;
+            width:80%;
+        }
+ #btn_box button {
+            padding:8px 16px;
+            border:none;
+            border-radius: 5px;
+            color: black;
+            cursor: pointer;
+        }
+
+
+
+      /*FOOTER*/
+      footer {
+        background-color: rgb(1, 1, 22);
+        height: 100px;
+       
+        text-align: center;
+        color: white;
+      }
+      
+</style>
+</head>
+
+<body>
+    <div id="DripBag" class="tabcontent">
+      <h1>오늘의 주요 News & 실시간 검색어순위</h1>
+      <p>자유롭게 댓글을 남겨주세요</p>
+      
+    </div>
+    
+    <div id="Bestcm" class="tabcontent">
+      <h1>Best of Best</h1>
+      <p>Best of Best</p> 
+    </div>
+    
+    <div id="Notice" class="tabcontent">
+      <h1>Notice</h1>
+      <p>알려드립니다.</p>
+    </div>
+    
+    <div id="issue" class="tabcontent">
+      <h1>이번주 핫이슈 현황</h1>
+      <p>A week Hot issue.</p>
+    </div>
+
+    <button class="tablink" onclick="openNav('DripBag', this, 'rgb(1, 1, 22)')" id="defaultOpen">DripBag</button>
+    <button class="tablink" onclick="openNav('Bestcm', this, 'gray')">Best of Best</button>
+    <button class="tablink" onclick="openNav('Notice', this, 'rgb(1, 1, 22)')">Notice</button>
+    <button class="tablink" onclick="openNav('issue', this, 'gray')">A week Hot issue</button>
+
+
+   
+   
+   
+
+  <div class="column">
+    <section> 
+    <div class="leftcontents">
+      <div class="newsimage">
+        <img src="..\images\news.jpg" alt="대충 여기에 사진을 넣읍시다" />
+      </div>
+      <br />
+
+  <form>
+    <div class="newstitle">
+      <fieldset>
+        <legend>뉴스제목</legend>
+        <span><h2>여기는 제목</h2></span>
+      </fieldset>
+    </div>
+  </form>
+
+  <div class="newsstory">
+    <h3>
+      내에에에에에에용 내용용 <br />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
+      fuga qui. Atque beatae est ex expedita, repellendus autem, illum
+      similique cum quibusdam fuck, veritatis nam voluptates modi
+      inventore tempore molestiae id!
+    </h3>
+  </div>
+  </div>
+  
+    <div class="centercontents">
+        <h2>OR</h2>
+      </div>
+      
+ 
+  
+ 
+    <div class="rightcontents">
+      <div class="lanklist">
+          <ul>
+              <li><a href="#">순서 있는 목록의 아이템 1</a></li>
+              <li><a href="#">순서 있는 목록의 아이템 2</a></li>
+              <li><a href="#">순서 있는 목록의 아이템 3</a></li>
+              <li><a href="#">순서 있는 목록의 아이템 4</a></li>
+              <li><a href="#">순서 있는 목록의 아이템 5</a></li>
+              <li><a href="#">순서 있는 목록의 아이템 6</a></li>
+              <li><a href="#">순서 있는 목록의 아이템 7</a></li>
+              <li><a href="#">순서 있는 목록의 아이템 8</a></li>
+              <li><a href="#">순서 있는 목록의 아이템 9</a></li>
+              <li><a href="#">순서 있는 목록의 아이템 10</a></li>
+          </ul>
+        </div>    
+  </div>
+    </section>
+</div>
+
+    <script>
+    function openNav(NavName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(NavName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    
+    }
+    
+    document.getElementById("defaultOpen").click();
+    </script>
+       <footer><h1>footer</h1></footer>
+  
+   
+</html>

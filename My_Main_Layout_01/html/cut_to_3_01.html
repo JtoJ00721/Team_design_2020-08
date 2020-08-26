@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>나누어보자</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {font-family: "Lato", sans-serif;}
+        
+        /*여기는
+        네비바와 제목을 위한
+        CSS공간*/
+        .tablink {
+          background-color: #555;
+          color: white;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          font-size: 20px;
+          font: bold;
+          width: 25%;
+        }
+        
+        .tablink:hover {
+          background-color: #777;
+        }
+        
+        
+        .tabcontent {
+          color: white;
+          display: none;
+          padding: 50px;
+          text-align: center;
+        }
+        
+        #DripBag {background-color:coral;}
+        #Bestcm {background-color:cornflowerblue;}
+        #Notice {background-color:burlywood;}
+        #issue {background-color:olivedrab;}
+
+        /*여기는
+        네비바와 제목을 위한
+        CSS공간*/
+
+        /*여기는 
+        cut소스 공간을 위한 
+        CSS공간*/
+
+        .cut {
+            height: 1000px;
+            background-color: aqua;
+            text-align: center;
+        }
+
+        #one {
+            background-color: navy;
+            display: inline-block;
+            width: 33%;
+        }
+
+        #two {
+            background-color: crimson;
+            display: inline-block;
+            width: 33%;
+        }
+
+        #three {
+            background-color: yellowgreen;
+            display: inline-block;
+            width: 33%;
+        }
+
+        /*여기는 
+        cut소스 공간을 위한 
+        CSS공간*/
+
+        /*FOOTER*/
+        footer {
+        background-color: navy;
+        height: 100px;
+        text-align: center;
+        color: white;
+      }
+      /*FOOTER*/
+        
+        </style>
+</head>
+<body>
+    <div id="DripBag" class="tabcontent">
+        <h1>DripBag</h1>
+        <p>4자성어로 자유롭게 댓글을 달아보자</p>
+      </div>
+      
+      <div id="Bestcm" class="tabcontent">
+        <h1>Best of Best</h1>
+        <p>Best of Best</p> 
+      </div>
+      
+      <div id="Notice" class="tabcontent">
+        <h1>Notice</h1>
+        <p>알려드립니다.</p>
+      </div>
+      
+      <div id="issue" class="tabcontent">
+        <h1>이번주 핫이슈 현황</h1>
+        <p>A week Hot issue.</p>
+      </div>
+
+
+      
+      <button class="tablink" onclick="openNav('DripBag', this, 'coral')" id="defaultOpen">DripBag</button>
+      <button class="tablink" onclick="openNav('Bestcm', this, 'cornflowerblue')">Best of Best</button>
+      <button class="tablink" onclick="openNav('Notice', this, 'burlywood')">Notice</button>
+      <button class="tablink" onclick="openNav('issue', this, 'olivedrab')">A week Hot issue</button>
+      
+      <div class="cut">
+          <div id="one"><h1>1</h1></div>
+          <div id="two"><h1>2</h1></div>
+          <div id="three"><h1>3</h1></div>
+      </div>
+
+      <footer>호옹이</footer>
+</body>
+
+<script>
+    // 이건 네비바를 위한 스크립트
+
+    function openNav(NavName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(NavName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+    
+    document.getElementById("defaultOpen").click();
+
+    // 이건 네비바를 위한 스크립트
+</script>
+</html>
