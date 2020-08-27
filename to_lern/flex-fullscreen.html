@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+
+      body {
+        display: flex;
+        flex-flow: column;
+      }
+      header {
+        background-color: yellowgreen;
+        color: white;
+        padding: 2rem;
+      }
+
+      nav {
+        background-color: black;
+        color: white;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        background-color: inherit;
+        color: inherit;
+        display: flex;
+      }
+
+      nav ul li {
+        color: inherit;
+        background-color: inherit;
+        cursor: pointer;
+      }
+
+      nav ul li:first-child {
+        margin-left: 30px;
+      }
+
+      nav ul li a {
+        /* 
+          a tag를 가장 안쪽에 배치할때는
+          display를 inline-block으로 설정해 주어야
+          부모 box와 어울리는 모양이 된다.
+          */
+        display: inline-block;
+        text-decoration: none;
+        padding: 12px 16px;
+        color: inherit;
+      }
+
+      nav ul li a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      section#main_content {
+        flex: 100%;
+        border: 1px solid red;
+        width: 100%;
+        margin: 10px auto;
+        overflow: auto;
+
+        display: flex;
+      }
+
+      #main_content aside {
+        flex: 1;
+        border: 1px solid green;
+        margin: 10px 3px;
+      }
+
+      #main_content section {
+        flex: 3px;
+        border: 1px solid red;
+        margin: 10px 3px;
+        overflow: auto;
+      }
+
+      footer {
+        background-color: blue;
+        color: white;
+      }
+      footer address {
+        text-align: center;
+        background-color: inherit;
+        color: inherit;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="logo.png" width="250px" height="90px" alt="로고" />
+    </header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/bbs">게시판</a></li>
+        <li><a href="/member/login">로그인</a></li>
+        <li><a href="/member/join">회원가입</a></li>
+      </ul>
+    </nav>
+    <section id="main_content">
+      <aside id="left_menu">
+        <ul>
+          <li>의류</li>
+          <li>신발</li>
+          <li>여름용품</li>
+        </ul>
+      </aside>
+      <section id="content">
+        <img
+          src="road-4143370.jpg"
+          alt="메인이미지"
+          width="200px"
+          height="200px"
+          style="float: left; margin: 5px"
+        />
+      </section>
+      <aside id="right_menu">Right Menu</aside>
+    </section>
+    <footer>
+      <address>CopyRight &copy; moonlf2000@naver.com</address>
+    </footer>
+  </body>
+</html>
